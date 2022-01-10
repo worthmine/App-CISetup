@@ -5,29 +5,39 @@ addons:
       - aspell
       - aspell-en
 language: perl
-perl:
-  - blead
-  - dev
-  - '5.30'
-  - '5.28'
-  - '5.26'
-  - '5.24'
-  - '5.22'
-  - '5.20'
-  - '5.18'
-  - '5.16'
-  - '5.14'
+matrics:
+  include:
+    - perl: blead
+    - perl: dev
+    - perl: '5.34'
+    - perl: '5.32'
+    - perl: '5.30'
+    - perl: '5.28'
+    - perl: '5.26'
+    - perl: '5.24'
+    - perl: '5.22'
+    - perl: '5.20'
+    - perl: '5.18'
+    - perl: '5.16'
+    - perl: '5.14'
+    - perl: "5.12"
+      dist: trusty
+    - perl: "5.10"
+      dist: trusty
+    - perl: "5.8"
+      dist: trusty
 cache:
   directories:
     - $HOME/perl5
 matrix:
   allow_failures:
-    - perl: blead
-    - perl: dev
-  fast_finish: 1
+    - perl:
+      - blead
+      - dev
+  fast_finish: true
   include:
     - env: COVERAGE=1
-      perl: '5.30'
+      perl: ['5.30']
 env:
   global:
     - AUTHOR_TESTING=1

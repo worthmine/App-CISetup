@@ -236,7 +236,7 @@ sub _update_env_vars {
             qw(
                 RELEASE_TESTING=1
                 AUTHOR_TESTING=1
-                ),
+            ),
         )
     ];
 
@@ -396,7 +396,7 @@ sub _reorder_addons_block {
         build_command_prepend
         build_command
         branch_pattern
-    );
+        );
 
     return $block
         =~ s/coverity_scan:\n.+(?=\S|\z)/coverity_scan:\n$reordered/msr;

@@ -90,7 +90,7 @@ sub test_create_and_update {
                     5.18
                     5.16
                     5.14
-                    )
+                )
             ],
             cache => {
                 directories => ['$HOME/perl5'],

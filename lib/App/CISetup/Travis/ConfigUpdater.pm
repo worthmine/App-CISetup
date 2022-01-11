@@ -62,7 +62,7 @@ sub _cli_params {
             email_address
             github_user
             slack_key
-            )
+        )
     );
 }
 ## use critic

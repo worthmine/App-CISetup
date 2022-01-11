@@ -15,7 +15,7 @@ __PACKAGE__->provide_types_from(
     qw(
         MooseX::Types::Moose
         MooseX::Types::Path::Tiny
-        )
+    )
 );
 
 MooseX::Getopt::OptionTypeMap->add_option_type_to_map( $_ => '=s' )

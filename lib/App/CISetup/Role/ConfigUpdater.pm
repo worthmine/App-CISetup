@@ -83,7 +83,7 @@ sub _update_files {
         }
         catch {
             print "\n\n\n" . $file . "\n" or die $!;
-            print $_ or die $!;
+            print $_                      or die $!;
         };
 
         next unless $updated;

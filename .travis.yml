@@ -43,6 +43,7 @@ env:
     - AUTHOR_TESTING=1
     - RELEASE_TESTING=1
 before_install:
+  - git branch -m master
   - eval $(curl https://travis-perl.github.io/init) --auto --always-upgrade-modules
 ### __app_cisetup__
 # ---
